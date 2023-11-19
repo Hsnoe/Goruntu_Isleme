@@ -10,8 +10,8 @@ while True:
     lower_red = np.array([0, 100, 100])     #kırmızı renk aralığını belirledim.
     upper_red = np.array([10, 255, 255])
 
-    maske = cv2.inRange(hsv, lower_red, upper_red)   #maskeleme işlemini yaptık  inrange metodu ile
-    result = cv2.bitwise_and(gorüntü, gorüntü, maske=maske)  #görüntüyü filtreledik
+    mask = cv2.inRange(hsv, lower_red, upper_red)   #maskeleme işlemini yaptık  inrange metodu ile
+    result = cv2.bitwise_and(gorüntü, gorüntü, mask=mask)  #görüntüyü filtreledik
 
     cv2.imshow("kamera",gorüntü)
     cv2.imshow('Result', result)    #sonucu ekrana gösterdik.
